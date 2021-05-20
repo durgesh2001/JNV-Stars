@@ -1,9 +1,9 @@
 .alumini .member {
     position: relative;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    border-radius: 5px;
-    background: #fff;
+    border-radius: 25px;
+    background: rgb(245, 241, 241);
     transition: 0.5s;
   }
   

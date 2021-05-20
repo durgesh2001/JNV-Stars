@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-
+from .models import *
 
 def index(request):
     return render(request, "index.html")
@@ -11,7 +11,8 @@ def index(request):
 
 
 def alumini(request):
-    return render(request, "alumini.html")
+    alumi = aluminies.objects.all()
+    return render(request, "alumini.html", {'alumi': alumi})
 
 
 
