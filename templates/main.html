@@ -8,7 +8,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>JNV STARS</title>
+  {% comment %} <title>JNV STARS</title> {% endcomment %}
+  <title>JnvStars{% block title %}{% endblock title %}</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -50,7 +51,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="{% static 'img/logo.png' %}" alt="">
-        <span>JNV Stars</span>
+        <span>JnvStars</span>
       </a>
 
       <nav id="navbar" class="navbar">
