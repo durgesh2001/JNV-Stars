@@ -29,3 +29,8 @@ def contact(request):
 
 def campus(request):
     return render(request, "campus.html")
+
+
+def student(request, pk):
+    stu = aluminies.objects.get(id=pk)
+    return render(request, "student.html", {'stu': stu})
