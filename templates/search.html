@@ -160,8 +160,6 @@
 	cursor: pointer;
 }
 
-
-
 @media screen and (max-width: 767px) {
   .s010 form .inner-form .basic-search .input-field input {
     padding: 10px 110px 10px 30px;
@@ -206,6 +204,7 @@
                     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                   </svg>
                 </div>
+               
               </div>
             </div>
             <center><button class="btn-search">search</button></center>
@@ -219,11 +218,24 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Aluminies Of JNV Hardoi</h2>
-      <p>These are the aluminies of JNV Hardoi.If you want to add your name please contact us.uisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <h2>Search Results:</h2>
+      {% if alumi|length < 1 %}
+
+      <p>No Search Results</p>
+
+      Your Search - <strong>{{query}} </strong>- did not match any alumunies.<br><br><br>
+    Suggestions:<br>
+    <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try different keywords. </li>
+    <li>Try more general keywords.</li>
+    <li>Try fewer keywords.</li>
+    </ul> 
+      {% endif %}
     </div>
 
     <div class="row">
+      
 
       {% for i in alumi %}
 
@@ -232,7 +244,7 @@
           <div class="pic"><img src="{{i.alumini_image.url}}" class="img-fluid" alt=""></div>
           <div class="member-info">
             <h4>{{i.name}}</h4>
-            <span>{{i.profession}}</span>
+            <span >{{i.profession}}</span>
             <span>{{i.batch}}</span>
             <p>{{i.bio}}</p>
             <br>

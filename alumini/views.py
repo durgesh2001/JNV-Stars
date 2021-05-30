@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from alumini.models import aluminies
 
 # Create your views here.
 
@@ -34,3 +35,16 @@ def campus(request):
 def student(request, pk):
     stu = aluminies.objects.get(id=pk)
     return render(request, "student.html", {'stu': stu})
+
+
+def search(request):
+    query = request.GET['query']
+    if len(query)>78:
+        alumi = []
+    else :    
+        alumiBatch = aluminies.objects.filter(batch__icontains = query)
+        alumiName = aluminies.objects.filter(name__icontains = query)
+        alumi = alumiBatch | alumiName
+
+    params = {'alumi' : alumi, 'query' : query}
+    return render(request, "search.html", params)
