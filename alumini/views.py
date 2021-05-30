@@ -32,9 +32,9 @@ def campus(request):
     return render(request, "campus.html")
 
 
-def student(request, pk):
+def profile(request, pk):
     stu = aluminies.objects.get(id=pk)
-    return render(request, "student.html", {'stu': stu})
+    return render(request, "profile.html", {'stu': stu})
 
 
 def search(request):
