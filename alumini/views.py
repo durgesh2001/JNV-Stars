@@ -32,15 +32,6 @@ def campus(request):
     return render(request, "campus.html")
 
 
-<<<<<<< HEAD
-# def student(request, pk):
-#     stu = aluminies.objects.get(id=pk)
-#     return render(request, "student.html", {'stu': stu})
-
-def profile(request, pk):
-    stu = aluminies.objects.get(id=pk)
-    return render(request, "profile.html", {'stu': stu})
-=======
 def profile(request, pk):
     stu = aluminies.objects.get(id=pk)
     return render(request, "profile.html", {'stu': stu})
@@ -57,4 +48,3 @@ def search(request):
 
     params = {'alumi' : alumi, 'query' : query}
     return render(request, "search.html", params)
->>>>>>> ad17418e78d86855387a579f73d027a934cc21e7
