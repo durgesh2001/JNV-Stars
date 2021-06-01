@@ -1,5 +1,5 @@
 {% extends 'main.html' %}
-{% block title %} | About{% endblock title %}
+{% block title %} | {{stu.name}}{% endblock title %}
 {% block content %}
 {% load static %}  
 
@@ -142,12 +142,9 @@ img {
 }
 
 
-.text-sky {
-    color: #02c2c7
-}
 
-.text-orange {
-    color: #e95601
+.text-blue {
+    color: #11043f
 }
 
 .text-green {
@@ -202,7 +199,7 @@ a.text-purple:hover {
 
 a.text-lightred:hover {
     opacity: 0.8;
-    color: #8222ff
+    color: #ff5722
 }
 
 
@@ -248,7 +245,7 @@ a.text-lightred:hover {
 
             <div class="col-lg-8 col-md-7"><hr>
                 <div class="team-single-text padding-50px-left sm-no-padding-left">
-                    <h4 class="font-size38 sm-font-size32 xs-font-size30" ><span class="fas  text-orange">{{stu.name}}</span></h4>
+                    <h4 class="font-size38 sm-font-size32 xs-font-size30" ><span class="fas  text-blue">{{stu.name}}</span></h4>
                     <p class="no-margin-bottom">{{stu.bio}}</p>
                     <br><hr><br>
                     <div class="contact-info-section margin-40px-tb">
@@ -257,8 +254,8 @@ a.text-lightred:hover {
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-graduation-cap text-orange"></i>
-                                        <strong class="margin-10px-left text-orange">Batch :</strong>
+                                        <i class="fas fa-graduation-cap text-lightred"></i>
+                                        <strong class="margin-10px-left text-lightred">Batch :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
                                         <p>{{stu.batch}}</p>
@@ -270,11 +267,11 @@ a.text-lightred:hover {
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="far fa-gem text-yellow"></i>
-                                        <strong class="margin-10px-left text-yellow">Higher Education :</strong>
+                                        <i class="far fa-gem text-lightred"></i>
+                                        <strong class="margin-10px-left text-lightred">Higher Education :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p>BTech (2nd Year)</p>
+                                        <p>{{stu.education}}</p>
                                     </div>
                                 </div>
 
@@ -287,7 +284,7 @@ a.text-lightred:hover {
                                         <strong class="margin-10px-left text-lightred">College :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p>Rajkiya Engineering College Bijnor</p>
+                                        <p>{{stu.college}}</p>
                                     </div>
                                 </div>
 
@@ -296,11 +293,11 @@ a.text-lightred:hover {
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-map-marker-alt text-green"></i>
-                                        <strong class="margin-10px-left text-green">Address :</strong>
+                                        <i class="fas fa-map-marker-alt text-lightred"></i>
+                                        <strong class="margin-10px-left text-lightred">Address :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p>Regina ST, London, SK.</p>
+                                        <p>{{stu.address}}</p>
                                     </div>
                                 </div>
 
@@ -309,11 +306,11 @@ a.text-lightred:hover {
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-mobile-alt text-purple"></i>
-                                        <strong class="margin-10px-left xs-margin-four-left text-purple">Phone :</strong>
+                                        <i class="fas fa-mobile-alt text-lightred"></i>
+                                        <strong class="margin-10px-left xs-margin-four-left text-lightred">Phone :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p>7753076264</p>
+                                        <p>{{stu.phone}}</p>
                                     </div>
                                 </div>
 
@@ -321,11 +318,11 @@ a.text-lightred:hover {
                             <li>
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-envelope text-pink"></i>
-                                        <strong class="margin-10px-left xs-margin-four-left text-pink">Email :</strong>
+                                        <i class="fas fa-envelope text-lightred"></i>
+                                        <strong class="margin-10px-left xs-margin-four-left text-lightred">Email :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p><a href="javascript:void(0)">addyour@emailhere</a></p>
+                                        <p><a href="{{stu.email}}">{{stu.email}}</a></p>
                                     </div>
                                 </div>
                             </li>
