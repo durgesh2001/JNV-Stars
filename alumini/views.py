@@ -40,7 +40,7 @@ def profile(request, pk):
 def search(request):
     query = request.GET['query']
     if len(query)>78:
-        alumi = []
+        alumi = aluminies.objects.none()
     else :    
         alumiBatch = aluminies.objects.filter(batch__icontains = query)
         alumiName = aluminies.objects.filter(name__icontains = query)
