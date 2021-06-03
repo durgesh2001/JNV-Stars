@@ -1,0 +1,127 @@
+.ourteam{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+.our-team .team{
+    position: relative;
+    padding: 10px 0 10px 20px;
+}
+.our-team .team:before{
+    content: "";
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #011627;
+}
+.our-team .pic{
+    position: relative;
+    overflow: hidden;
+}
+.our-team .pic:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .pic:after{
+    opacity: 1;
+}
+.our-team .pic img{
+    width: 100%;
+    height: auto;
+}
+.our-team .social-links{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social-links{
+    bottom: 20px;
+}
+.our-team .social-links li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.our-team .social-links li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fdfffc;
+    font-size: 18px;
+    color: #fdfffc;
+    transition: all 0.5s ease 0s;
+}
+.our-team .social-links li a:hover{
+    background: #000000;
+    border: 1px solid #ffffff;
+}
+.our-team .team-info{
+    padding: 20px;
+    background: #9498ce;
+    color: #011627;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.our-team .team-info:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: #011627;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .team-info:before{
+    left: 0;
+}
+.our-team .title{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .title{
+    color: #2ec4b6;
+}
+.our-team .post{
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #110b0c;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.our-team:hover .team-info,
+.our-team:hover .post{
+    color: #fdfffc;
+}
+.our-team .description{
+    font-size: 14px;
+    line-height: 22px;
+}
+@media screen and (max-width: 990px){
+    .our-team{ margin-bottom: 20px; }
+}

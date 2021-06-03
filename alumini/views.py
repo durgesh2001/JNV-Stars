@@ -48,3 +48,7 @@ def search(request):
 
     params = {'alumi' : alumi, 'query' : query}
     return render(request, "search.html", params)
+
+
+def ourteam(request):
+    return render(request, "ourteam.html")
