@@ -120,34 +120,41 @@
         </div>
 
         <div class="col-lg-6">
-          <form action="forms/contact.php" method="post" class="php-email-form">
+          <form action="https://script.google.com/macros/s/AKfycbzvwVGNcAqIBTw5ka9M_0tvcACIwdzwJaPM5xIyPFMlEnfs1Gzr8WuyAVh6ojGZWC8uVg/exec"  method="post"  class="tm-contact-form" >
+            {% csrf_token %}
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
               </div>
 
               <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
               </div>
 
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+              <div class="col-md-6 ">
+                <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Your Mobile number" >
               </div>
 
+            
+
               <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required></textarea>
               </div>
 
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-
+              
                 <button type="submit">Send Message</button>
               </div>
 
             </div>
+            <br>
+            
+            <div class="thankyou_message" style="display:none;">
+              <div class="p-3 mb-2 bg-success text-white">
+              <h5>Your message has been sent.<br><em>Thank you!</em> </h5>
+             </div> 
+          </div>
           </form>
 
         </div>
@@ -170,7 +177,7 @@
 
 
 
-
+<script type="text/javascript" data-cfasync="false" src="{% static 'js/form-submission-handler.js' %}"></script>
 
 
 

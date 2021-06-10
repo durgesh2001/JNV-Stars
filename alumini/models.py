@@ -5,7 +5,6 @@ from django.db import models
 
 
 class aluminies(models.Model):
-    
     name = models.CharField(max_length=50, null=True)
     profession = models.CharField(max_length=70, null=True)
     batch = models.IntegerField( null=True)
@@ -27,3 +26,15 @@ class aluminies(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Contact(models.Model):
+    sno = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50, null=True)
+    email = models.EmailField(max_length=100, null=True)
+    message = models.TextField()
+    time =models.DateTimeField(auto_now_add=True,blank=True)
+
+    def __str__(self):
+        return 'Message from ' + self.name
