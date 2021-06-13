@@ -5,3 +5,4 @@ from django.contrib import admin
 from .models import *
 
 admin.site.register(aluminies)
+admin.site.register(Contact)

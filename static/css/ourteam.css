@@ -16,6 +16,10 @@
     left: 0;
     background: #011627;
 }
+.our-team:hover{
+transform: scale(1.08);
+box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
 .our-team .pic{
     position: relative;
     overflow: hidden;
