@@ -3,41 +3,185 @@
 {% block content %}
 {% load static %}  
 
-
-
-
-
-
-
 <section id="clients" class="clients">
+      <link rel="stylesheet" type="text/css" href="style.css">
+        <!--About JNV-->
+        <section id="about-overview">
+        <div class="ab-overview">
+        <style>
+                h3{
+            text-align: center;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bold;
+            color: brown;
+              }
+            .ab-overview img{
+              padding: auto;
+              width: 100%;
+              border-radius: 2%;
+              }
+              .ab-overview{
+                background-color: lightblue;
+                text-align:center;
+              }
+        </style>
+                <h3>Overview</h3>
+                <img src="{% static 'img/about-images/4.jpeg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, quae. Nesciunt rem quos veniam harum officiis quod numquam maiores voluptatibus, officia molestias laboriosam, sequi cumque quis voluptatem autem excepturi qui? ipsum dolor sit amet consectetur, adipisicing elit. At, nobis.</p>
+                <br>
+        </div>
+        </section>
 
-    <div class="container" data-aos="fade-up">
+      <section id="ab-administration" >
+        <!--Administration-->
+        <style>
+            .administration img{
+              width: 30%;
+              float: right;
+              border-radius: 15%;
+              padding: 10px;
+            }
+            
+            .administration {
+              text-align:center;
+              font-size: 16px;
+              float: left;
+              background-color: lightblue;
+            }
+          </style>
+            <div class="administration">
+                <h3>Administration</h3>
+                <img src="{% static 'img/about-images/1.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, odio? ipsum dolor sit amet consectetur adipisicing elit. Iure, quidem temporibus. Necessitatibus velit illum officiis voluptatibus officia voluptatem nihil voluptas veritatis omnis. Quod quia beatae doloremque sint aut dolor dolore., ipsum dolor sit amet consectetur adipisicing elit. Ducimus, numquam doloribus suscipit iusto molestiae est consectetur nisi accusantium quas officiis., ipsum dolor sit amet consectetur adipisicing elit. Inventore, error.</p>
+                <br>
+        </div>
+      </section>
 
-      <header class="section-header">
+      
+      <!--Academics-->
+      <section id="ab-academics">
+          <style>
+          .academics {
+            text-align:right;
+            font-size: 18px;
+            text-align: center;
+            padding: auto;
+          }
+          .academics img{
+            padding: 10px;
+            width: 30%;
+            height: 20%;
+            float: left;
+            border-radius: 10%;
+          }
+          </style>
+            <div class="academics">
+                <h3>Academics</h3>   
+                <img src="{% static 'img/about-images/2.jpeg' %}" alt="">
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, quibusdam. ipsum dolor sit amet consectetur adipisicing elit. Atque sapiente quibusdam voluptates vitae autem neque at inventore officia laudantium veritatis. ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla dolorem harum, totam laboriosam itaque saepe inventore dolor iure nemo! ipsum dolor sit, amet consectetur adipisicing elit. Iste, illo.</p>
+                <br>
+        </div>
+      </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>About</h2>
-        <p>About JNV Hardoi</p>
-      </header>
+      <!--Mess-->
+      <section id="ab-mess">
+        <style>
+          .mess img{
+              padding: 10px;
+              width: 35%;
+              height: 5%;
+              float: right;
+              border-radius: 20%;
+          }
+          .mess{
+            font: size 16px;
+            text-align:center;
+          }
+        </style>
+        <div class="mess">   
+            <h3>Mess</h3>
+                <img src="{% static 'img/about-images/3.jpeg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita a non quis cumque libero amet nam aliquam quo nulla adipisci? ipsum dolor sit amet consectetur adipisicing elit. Libero, nam.</p>
+                <hr>
+        </div>
+      </section>
 
-   
+      <!--Hostel-->
+      <section id="ab-hostel">
+      <style>
+       .hostel img{
+              padding-top: 10px;
+              padding-left:10px;
+              padding-right:10px;
+              width: 35%;
+              height: 20%;
+              float: right;
+              border-radius: 20%;
+          }
+          .hostel {
+            font-size: 16px;
+            padding:auto;
+            text-align:center;
+          }
+        </style>
+        <div class="hostel">   
+            <h3>Hostel</h3>
+                <img src="{% static 'img/about-images/1.jpg' %}" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam temporibus suscipit quaerat! Reiciendis earum nesciunt placeat maiores, exercitationem sed. ipsum dolor sit amet consectetur adipisicing elit. Magni, fuga.</p>
+                <hr>
+        </div>
+      </section>
 
 
-    </div>
-</section>  
+      <!--Sports-->
+      <section id="ab-sports">
+      <style>
+          .sports {
+            text-align:right;
+            font-size: 18px;
+            text-align: center;
+            padding: auto;
+          }
+          .sports img{
+            padding: 10px;
+            width: 30%;
+            height: 20%;
+            float: left;
+            border-radius: 10%;
+          }
+          </style>
+        <div class="sports">
+            <h3>Sports</h3>
+                <img src="{% static 'img/about-images/2.jpeg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eaque quae veritatis deleniti deserunt tenetur nulla cupiditate dolores iusto ex? ipsum dolor sit amet consectetur adipisicing elit. Debitis, magni.</p>
+                <hr>
+        </div>
+      </section>
 
-
-
-
-
-
-
-
-
-
-
-
+      <!--Cultural Activities-->
+      <section id="ab-culture">
+      <style>
+          .cultural_activities {
+            text-align:right;
+            font-size: 18px;
+            text-align: center;
+            padding: auto;
+          }
+          .cultural_activities img{
+            padding: 10px;
+            width: 30%;
+            height: 20%;
+            float: left;
+            border-radius: 10%;
+          }
+          </style>
+        <div class="cultural_activities">
+            <h3>Cultural Activities</h3>
+                <img src="{% static 'img/about-images/1.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab, rem commodi corrupti magnam cumque praesentium nemo nam et neque! ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa!</p>
+                <hr>
+        </div>
+      </section>
+</section>
 {% endblock %}
