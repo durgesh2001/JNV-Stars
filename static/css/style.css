@@ -522,24 +522,24 @@ section {
   height: 100%;
 }
 
-.values .box img {
+.values .boxe img {
   padding: 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
 }
 
-.values .box h3 {
+.values .boxe h3 {
   font-size: 24px;
   color: #012970;
   font-weight: 700;
   margin-bottom: 18px;
 }
 
-.values .box:hover {
+.values .boxe:hover {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
 }
 
-.values .box:hover img {
+.values .boxe:hover img {
   transform: scale(1);
 }
 
@@ -1075,13 +1075,13 @@ section {
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
+.contact .tm-contact-form {
   background: #fafbff;
   padding: 30px;
   height: 100%;
 }
 
-.contact .php-email-form .error-message {
+.contact .tm-contact-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1091,7 +1091,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .sent-message {
+.contact .tm-contact-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1101,7 +1101,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .tm-contact-form .loading {
   display: none;
   background: #fff;
   text-align: center;
@@ -1109,7 +1109,7 @@ section {
   margin-bottom: 24px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .tm-contact-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1122,26 +1122,26 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .tm-contact-form input, .contact .tm-contact-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .tm-contact-form input:focus, .contact .tm-contact-form textarea:focus {
   border-color: #4154f1;
 }
 
-.contact .php-email-form input {
+.contact .tm-contact-form input {
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.contact .tm-contact-form textarea {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .tm-contact-form button[type="submit"] {
   background: #4154f1;
   border: 0;
   padding: 10px 30px;
@@ -1150,7 +1150,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .tm-contact-form button[type="submit"]:hover {
   background: #5969f3;
 }
 
