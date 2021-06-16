@@ -17,8 +17,13 @@
         <p>About JNV Hardoi</p>
       </header>
       <div class=" d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <style>
+          .content{
+            background: linear-gradient(to bottom, #cc99ff 0%, #ffffff 100%);
+          }
+        </style>
             <div class="content">
-              <h3>Establishment</h3>
+              <h2>Establishment</h2>
               <p>As per the policy of the Government, one Jawahar Navodaya Vidyalaya is to be established in each district. Accordingly, 62 new JNVs have been sanctioned during 2016-17 in various districts of the country. In addition to this,10 JNVs each have been sanctioned in districts having a large concentration of SC & ST population. Besides this, 3 JNVs have been sanctioned in 03 districts i.e. Senapati-II (Manipur), Ukhrul-II (Manipur) & Ratlam-II (Madhya Pradesh) as special case, bringing the total number of JNVs sanctioned to 661. Each Vidyalaya has provision for a full-fledged campus with sufficient building for classrooms, dormitories, staff-quarters, dining-hall and other infrastructural facilities viz. play-grounds, workshops, library and labs etc. The opening of new Navodaya Vidyalayas is based on the offer from the State Government to provide around 30 acres of suitable land (relaxable on case to case basis) free of cost, alongwith sufficient temporary accommodation to run the school till the completion of permanent Vidyalaya building.</p>
   
               
@@ -36,12 +41,12 @@
         <section id="about-overview">
         <div class="ab-overview">
         <style>
-            h3{
+            h2{
                 text-align: center;
                 font-size: 30px;
                 font-style: italic;
                 font-weight: bold;
-                color: brown;
+                padding-top: 25px;
               }
             .ab-overview img{
                 padding: auto;
@@ -49,13 +54,11 @@
                 border-radius: 2%;
               }
               .ab-overview{
-
-                text-mar
-                text-align:justify;
+                text-align:left;
                 background: linear-gradient(to bottom, #cc99ff 0%, #ffffff 100%);
               }
         </style>
-                <h3>Overview</h3>
+                <h2>Overview</h2>
                 <img src="{% static 'img/about-images/4.jpeg' %}" alt="">
                 <p style="margin:8px">Jawahar Navodaya Vidyalaya Hardoi, is a fully residential, co-educational school affiliated to CBSE, New Delhi was established in 1992 and has classes from VI to XII standard. This Vidyalaya is run by Navodaya Vidyalaya Samiti, New Delhi, an autonomous body under the Department of Education and Literacy, Ministry of Education formely known as Ministry of Human Resource and Development(1985-2020), Government of India.<br><br> The school campus covers around 39.8  acres of forested land having various Buildings ( Administration & Academic Block, Hostels, Mess, Staff Quarters, Special Multi-purpose Hall [Under Construction]) and Playgrounds.</p>
         </div>
@@ -79,7 +82,7 @@
             }
           </style>
             <div class="administration">
-                <h3>Administration</h3>
+                <h2>Administration</h2>
                 <img src="{% static 'img/about-images/1.jpg' %}" alt="">
                 <p style="margin:8px">For each JNV, there is a Vidyalaya Advisory Committee for assistance on matters of academics, infrastructure and other general activities and a Vidyalaya Management Committee for budget preparation, selection of ad-hoc teachers and proper functioning of the school.<br>Normally the <a href="https://hardoi.nic.in/about-district/profile/"><span style="text-color:#cc66ff">district collector</span></a> of the concerned district is the ex-officio chairman of school level committees with local educationists, public representatives and officers from the district as members.</p>
                 <br>
@@ -90,27 +93,27 @@
       <!--Academics-->
       <section id="ab-academics">
           <style>
-          .academics {
-            text-align:right;
-            font-size: 18px;
-            text-align: center;
-            padding: auto;
-            background: linear-gradient(to bottom, #cc99ff 0%, #ffffff 100%);
-          }
-          .academics img{
-            padding: 10px;
-            width: 30%;
-            height: 20%;
-            float: left;
-            border-radius: 10%;
-          }
+            .academics {
+              text-align:right;
+              font-size: 18px;
+              text-align: center;
+              padding: auto;
+              background: linear-gradient(to bottom, #cc99ff 0%, #ffffff 100%);
+            }
+            .academics img{
+              padding: 10px;
+              width: 30%;
+              height: 20%;
+              float: left;
+              border-radius: 10%;
+            }
           </style>
-            <div class="academics">
-                <h3>Academics</h3>   
-                <img src="{% static 'img/about-images/2.jpeg' %}" alt="">
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, quibusdam. ipsum dolor sit amet consectetur adipisicing elit. Atque sapiente quibusdam voluptates vitae autem neque at inventore officia laudantium veritatis. ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla dolorem harum, totam laboriosam itaque saepe inventore dolor iure nemo! ipsum dolor sit, amet consectetur adipisicing elit. Iste, illo.</p>
-                <br>
-        </div>
+          <div class="academics">
+            <h2>Academics</h2>   
+            <img src="{% static 'img/about-images/2.jpeg' %}" alt="">
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, quibusdam. ipsum dolor sit amet consectetur adipisicing elit. Atque sapiente quibusdam voluptates vitae autem neque at inventore officia laudantium veritatis. ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla dolorem harum, totam laboriosam itaque saepe inventore dolor iure nemo! ipsum dolor sit, amet consectetur adipisicing elit. Iste, illo.</p>
+            <br>
+          </div>
       </section>
 
       <!--Mess-->
@@ -130,7 +133,7 @@
           }
         </style>
         <div class="mess">   
-            <h3>Mess</h3>
+            <h2>Mess</h2>
                 <img src="{% static 'img/about-images/3.jpeg' %}" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita a non quis cumque libero amet nam aliquam quo nulla adipisci? ipsum dolor sit amet consectetur adipisicing elit. Libero, nam.</p>
                 <hr>
@@ -157,10 +160,35 @@
           }
         </style>
         <div class="hostel">   
-            <h3>Hostel</h3>
+            <h2>Hostel</h2>
                 <img src="{% static 'img/about-images/1.jpg' %}" alt="">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam temporibus suscipit quaerat! Reiciendis earum nesciunt placeat maiores, exercitationem sed. ipsum dolor sit amet consectetur adipisicing elit. Magni, fuga.</p>
                 <hr>
+        </div>
+      </section>
+
+      <!--Primary Health Center-->
+      <section id="pri-health" >
+        <style>
+            .pri-health img{
+              width: 30%;
+              float: right;
+              border-radius: 15%;
+              padding: 10px;
+            }
+            
+            .pri-health {
+              text-align:left;
+              font-size: 16px;
+              float: left;
+              background: linear-gradient(to bottom, #cc99ff 0%, #ffffff 100%);
+            }
+          </style>
+            <div class="pri-health">
+                <h2>Primary Health Center</h2>
+                <img src="{% static 'img/about-images/1.jpg' %}" alt="">
+                <p style="margin:8px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae nam, sequi tenetur id modi, molestias ut optio distinctio delectus harum quo quas, explicabo aliquam repudiandae? Vero est porro quos.</p>
+                <br>
         </div>
       </section>
 
@@ -184,7 +212,7 @@
           }
           </style>
         <div class="sports">
-            <h3>Sports</h3>
+            <h2>Sports</h2>
                 <img src="{% static 'img/about-images/2.jpeg' %}" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eaque quae veritatis deleniti deserunt tenetur nulla cupiditate dolores iusto ex? ipsum dolor sit amet consectetur adipisicing elit. Debitis, magni.</p>
                 <hr>
@@ -210,7 +238,7 @@
           }
           </style>
         <div class="cultural_activities">
-            <h3>Cultural Activities</h3>
+            <h2>Cultural Activities</h2>
                 <img src="{% static 'img/about-images/1.jpg' %}" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ab, rem commodi corrupti magnam cumque praesentium nemo nam et neque! ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa!</p>
                 <hr>

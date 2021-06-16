@@ -8,13 +8,14 @@
       <li><a class="nav-link scrollto" href="{% url 'alumini' %}">Alumini</a></li>
       
       <li><a href="{% url 'alumini' %}">Blog</a></li>
-      <li class="dropdown"><a href="{%url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+      <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
         <ul>
-          <li><a class="nav-link scrollto" href="#about-overview" >Overview</a></li>
-          <li class="dropdown"><a href="#ab-administration"><span>Administration</span></a></li>
+          <li><a href="#about-overview">Overview</a></li>
+          <li><a href="#ab-administration"><span>Administration</span></a></li>
           <li><a href="#ab-academics">Academics</a></li>
           <li><a href="#ab-mess">Mess</a></li>
           <li><a href="#ab-hostel">Hostel</a></li>
+          <li><a href="#pri-health">Health Center</a></li>
           <li><a href="#ab-sports">Sports</a></li>
           <li><a href="#ab-culture">Cultural Activities</a></li>
         </ul>
