@@ -8,14 +8,43 @@
       <li><a class="nav-link scrollto" href="{% url 'alumini' %}">Alumini</a></li>
       
       <li><a href="{% url 'alumini' %}">Blog</a></li>
-      <li class="dropdown"><a href="{%url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+      <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
         <ul>
-          <li><a class="nav-link scrollto" href="#about-overview" >Overview</a></li>
-          <li class="dropdown"><a href="#ab-administration"><span>Administration</span></a></li>
-          <li><a href="#ab-academics">Academics</a></li>
+          <li><a href="#about-overview">Overview</a></li>
+          <li><a href="#ab-administration"><span>Administration</span></a></li>
+            <li class="dropdown"><a href="#ab-academics"><span>Academics</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#"><span style="font-size:12px"> Smart Class</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Labs</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Library</span></a></li>
+                </ul>
+              </li>
           <li><a href="#ab-mess">Mess</a></li>
-          <li><a href="#ab-hostel">Hostel</a></li>
-          <li><a href="#ab-sports">Sports</a></li>
+          <li class="dropdown"><a href="#ab-hostel"><span>Hostel</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li class="dropdown"><a href="#ab-hostel"><span style="font-size:14px">Boys Hostel</span><i class="bi bi-chevron-right"></i></a>
+                      <ul>
+                        <li><a href="#"><span style="font-size:12px">Arawali</span></a></li>
+                        <li><a href="#"><span style="font-size:12px">Neelgiri</span></a></li>
+                        <li><a href="#"<span style="font-size:12px">Shivalik</span></a></li>
+                        <li><a href="#"><span style="font-size:12px">Udaigiri</span></a></li>
+                      </ul>
+                  <li><a href="#">Girls Hostel</a></li>
+                </ul>
+          </li>
+          <li><a href="#pri-health">Health Center</a></li>
+          <li class="dropdown"><a href="#ab-sports"><span>Sports</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#"><span style="font-size:12px">Football</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Volleyball</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Kabaddi</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Cricket</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Kho-Kho</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Athelatics</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Badminton</span></a></li>
+                  <li><a href="#"><span style="font-size:12px">Table Tennis</span></a></li>
+                </ul>
+              </li>
           <li><a href="#ab-culture">Cultural Activities</a></li>
         </ul>
       </li>
