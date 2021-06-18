@@ -11,5 +11,6 @@ urlpatterns = [
     path('alumini/profile/<str:pk>', views.profile, name="profile"),
     path('search/', views.search, name="search"),
     path('ourteam/', views.ourteam, name="ourteam"),
+    path('gallery/', views.gallery, name="gallery"),
    
 ]

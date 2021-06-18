@@ -72,3 +72,5 @@ def search(request):
 
 def ourteam(request):
     return render(request, "ourteam.html")
+def gallery(request):
+    return render(request, "gallery.html")

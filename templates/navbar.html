@@ -48,9 +48,10 @@
           <li><a href="#ab-culture">Cultural Activities</a></li>
         </ul>
       </li>
+      <li><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
       <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
       <li><a class="nav-link scrollto" href="{% url 'ourteam' %}">OurTeam</a></li>
-      <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+      {% comment %} <li><a class="getstarted scrollto" href="#about">Get Started</a></li> {% endcomment %}
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
   </nav><!-- .navbar -->
