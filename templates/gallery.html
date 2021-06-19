@@ -68,7 +68,7 @@
       <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-2.jpg' %}" style="width:100%" onclick="currentSlide(2)" alt="Teacher's">
     </div>
     <div class="column">
-      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-3.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="School caption in the middle along with the house captions of Shivalik, Arawali, Udaigiri and Neelgiri from right to left.">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-3.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="School caption in the middle along with the house captions of Shivalik, Arawali, Udaigiri and Neelgiri from left to right.">
     </div>
     <div class="column">
       <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-4.jpg' %}" style="width:100%" onclick="currentSlide(4)" alt="'Alumni Meet' The most beautiful moment for every Navodayan.">
@@ -205,45 +205,50 @@ function showSlides(n) {
 </section>
 
 <!-- Gallery -->
+<!-- If you want to give the numbering of each image (in desktop mode) start from upper left corner and move towards the down and then the next column and so on... -->
+
 <section>
 <div class="row mt-3" data-aos="fade-up">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+  {% comment %} horizontal 1 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="{% static 'img/gallery/horizontal-img-1.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
-
+  {% comment %} vertical 1 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-
-    <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="{% static 'img/gallery/vertical-img-1.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
+  {% comment %} vertical 2 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+      src="{% static 'img/gallery/vertical-img-2.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
-
+  {% comment %} horizontal 2 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+      src="{% static 'img/gallery/horizontal-img-2.jpg' %}"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+  {% comment %} horizontal 3 {% endcomment %}
+    <img
+      src="{% static 'img/gallery/horizontal-img-3.jpg' %}"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  {% comment %} vertical 3 {% endcomment %}
+    <img
+      src="{% static 'img/gallery/vertical-img-3.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
