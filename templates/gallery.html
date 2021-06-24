@@ -3,47 +3,252 @@
 {% block content %}
 {% load static %}
 
+<section>
+<!-- Container for the image gallery -->
+<div class="container mt-3">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-1.jpg' %}" style="width:65%">
+    </center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-2.jpg' %}" style="width:65%">
+  </center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-3.jpg' %}" style="width:65%">
+    </center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-4.jpg' %}" style="width:65%">
+    </center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-5.jpg' %}" style="width:65%">
+    </center>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <center>
+      <img src="{% static 'img/gallery/slider/slider-img-6.jpg' %}" style="width:65%">
+    </center>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-1.jpg' %}" style="width:100%" onclick="currentSlide(1)" alt="The beauty of Jawahar Navodaya Vidyalaya Hardoi.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-2.jpg' %}" style="width:100%" onclick="currentSlide(2)" alt="Teacher's">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-3.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="School caption in the middle along with the house captions of Shivalik, Arawali, Udaigiri and Neelgiri from left to right.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-4.jpg' %}" style="width:100%" onclick="currentSlide(4)" alt="'Alumni Meet' The most beautiful moment for every Navodayan.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-5.jpg' %}" style="width:100%" onclick="currentSlide(5)" alt="Independence Day">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/gallery/slider/slider-img-6.jpg' %}" style="width:100%" onclick="currentSlide(6)" alt="Library">
+    </div>
+  </div>
+</div>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 37, 245, 0.89);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</section>
 
 <!-- Gallery -->
+<!-- If you want to give the numbering of each image (in desktop mode) start from upper left corner and move towards the down and then the next column and so on... -->
+
 <section>
 <div class="row mt-3" data-aos="fade-up">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+  {% comment %} horizontal 1 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="{% static 'img/gallery/horizontal-img-1.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
-
+  {% comment %} vertical 1 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-
-    <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="{% static 'img/gallery/vertical-img-1.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
+  {% comment %} vertical 2 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+      src="{% static 'img/gallery/vertical-img-2.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
-
+  {% comment %} horizontal 2 {% endcomment %}
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+      src="{% static 'img/gallery/horizontal-img-2.jpg' %}"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+  {% comment %} horizontal 3 {% endcomment %}
+    <img
+      src="{% static 'img/gallery/horizontal-img-3.jpg' %}"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  {% comment %} vertical 3 {% endcomment %}
+    <img
+      src="{% static 'img/gallery/vertical-img-3.jpg' %}"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
