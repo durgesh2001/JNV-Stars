@@ -86,6 +86,7 @@ box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
     z-index: 1;
     transition: all 0.5s ease 0s;
 }
+
 .our-team .team-info:before{
     content: "";
     width: 100%;
