@@ -3,12 +3,12 @@
 
 <nav id="navbar" class="navbar">
     <ul>
-      <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
-      <li><a class="nav-link scrollto" href="{% url 'campus' %}">Campus</a></li>
-      <li><a class="nav-link scrollto" href="{% url 'alumini' %}">Alumni</a></li>
+      <li class="{% block homeactive %} {% endblock homeactive %}"><a class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
+      <li class="{% block campusactive %} {% endblock campusactive %}"><a class="nav-link scrollto" href="{% url 'campus' %}">Campus</a></li>
+      <li class="{% block alumniactive %} {% endblock alumniactive %}"><a class="nav-link scrollto" href="{% url 'alumini' %}">Alumni</a></li>
       
       
-      <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+      <li class="dropdown {% block aboutactive %} {% endblock aboutactive %}"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
         <ul>
           <li><a href="#about-overview">Overview</a></li>
           <li><a href="#ab-administration"><span>Administration</span></a></li>
@@ -26,9 +26,9 @@
           <li><a href="#ab-culture">Cultural Activities</a></li>
         </ul>
       </li>
-      <li><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
-      <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
-      <li><a class="nav-link scrollto" href="{% url 'ourteam' %}">OurTeam</a></li>
+      <li class="{% block galleryactive %} {% endblock galleryactive %}"><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
+      <li class="{% block contactactive %} {% endblock contactactive %}"><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+      <li class="{% block teamactive %} {% endblock teamactive %}"><a class="nav-link scrollto" href="{% url 'ourteam' %}">OurTeam</a></li>
       {% comment %} <li><a class="getstarted scrollto" href="#about">Get Started</a></li> {% endcomment %}
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
