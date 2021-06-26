@@ -1,69 +1,92 @@
 <style>
-    .social{
+    .socialmed {
         position: fixed;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transform: translate(-290px, 0);
+        width: 10px;
+        margin-top: 150px;
+        box-shadow: 2px 2px 8px 0px rgba(235, 22, 22, 0.4);
+        z-index: 10000;
+        
       }
-      
-      .social a{
-        color: #fff;
-        background: rgba(0, 0, 0, 0.4);
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
+    
+      .socialmed li {
+        height: 60px;
+        position: relative;
+        width: 60px;
+        
+      }
+    
+      .socialmed li a {
+        color: white;
         display: block;
-        margin: 5px;
-        padding: 20px;
-        width: 300px;
-        text-align: right;
-        border-radius: 50px;
-        transition: 1s;
-        transition-property: transform;
+        height: 100%;
+        width: 100%;
+        line-height: 60px;
+        border-bottom: 1px solid rgba(246, 250, 16, 0.918);
+        transition: all 1s linear;
       }
-      
-      .social a:hover{
-        transform: translate(140px, 0);
+    
+      .socialmed li:nth-child(1) a {
+        background: #4267B2;
       }
-      
-      .social i{
-        margin-left: 10px;
-        font-size: 30px;
-        width: 30px;
-        height: 30px;
+    
+      .socialmed li:nth-child(2) a {
+        background: #1DA1F2;
       }
-      
-      .social a:nth-child(1) i{
-        color: #1DA0F0;
+    
+      .socialmed li:nth-child(3) a {
+        background: #E1306C;
       }
-      
-      .social a:nth-child(2) i{
-        color: #F80000;
+    
+      .socialmed li:nth-child(4) a {
+        background: #ff0000;
       }
-      
-      .social a:nth-child(3) i{
-        color: transparent;
-        background-image: linear-gradient(45deg, #FFDF9E, #E56969, #8A49A1);
-        -webkit-background-clip: text;
-        font-weight: 600;
+    
+      .socialmed li a i {
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        font-size: 27px;
       }
-      
-      .social a:nth-child(4) i{
-        color: #4ECCE8;
-      }   
+    
+      .socialmed ul li a span {
+        display: none;
+        font-weight: bold;
+        
+        text-transform: uppercase;
+      }
+    
+      .socialmed li:hover {
+        z-index: 10000;
+        width: 170px;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+        transition: all .2s linear;
+      }
+    
+      .socialmed ul li:hover a span {
+        padding-left: 30%;
+        display: block;
+      }
+      @media screen and (max-width: 768px) {
+        .socialmed {
+          display: none;
+        }
+    
+      }
+    
+         
 </style>
 
 
-
-
-
-  <!--social buttons start-->
-  <div class="social">
-    <a href="#">Facebook <i class="fab fa-facebook"></i></a>
-    <a href="#">Youtube <i class="fab fa-youtube"></i></a>
-    <a href="#">Instagram <i class="fab fa-instagram"></i></a>
-    <a href="#">Twitter <i class="fab fa-twitter"></i></a>
-  </div>
-  <!--social buttons end-->
+  <!--social media links-->
+  <div class="socialmed">
+    <ul type="none" class="p-0 text-decoration-none">
+      <li><a href="https://www.facebook.com/JNV-Stars-106622461646035" target="_blank" class=""><i
+            class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+      <li><a href="https://twitter.com/alumni_jnvstars" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+      <li><a href="https://instagram.com/alumni.jnv_hardoi?utm_medium=copy_link" target="_blank"><i
+            class="fab fa-instagram"></i><span>Instagram</span></a></li>
+       <li><a href="https://www.youtube.com/channel/UCGCUPqffmf0GC44KCrzzq8g" target="_blank"><i
+            class="fab fa-youtube"></i><span>Youtube</span></a></li>
+    </ul>
+  </div> 
