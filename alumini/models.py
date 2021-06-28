@@ -29,12 +29,3 @@ class aluminies(models.Model):
 
 
 
-class Contact(models.Model):
-    sno = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, null=True)
-    email = models.EmailField(max_length=100, null=True)
-    message = models.TextField()
-    time =models.DateTimeField(auto_now_add=True,blank=True)
-
-    def __str__(self):
-        return 'Message from ' + self.name

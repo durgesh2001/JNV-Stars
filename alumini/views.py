@@ -27,21 +27,7 @@ def about(request):
 
 
 def contact(request):
-    
-    if request.method == "POST":
-        name = request.POST['name']
-        email = request.POST['email']
-        message = request.POST['message']
-       
-        print(name,email,message)
-
-        if len(name)<3 or len(email)<5 or len(message)<4 :
-            messages.error(request, "Please,fill the form correctly.")
-        else:
-            contact = Contact(name=name, email=email, message=message)
-            contact.save()
-            messages.success(request, 'Your Message has been sent.')
-    return render(request, "contact.html")
+   return render(request, "contact.html")
 
 
 
