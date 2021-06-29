@@ -3,6 +3,7 @@ from alumini.models import aluminies
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -15,8 +16,12 @@ def index(request):
 
 
 def alumini(request):
-    alumi = aluminies.objects.all()
-    return render(request, "alumini.html", {'alumi': alumi})
+    alumni = aluminies.objects.all()   #.order_by('batch')
+    paginator = Paginator(alumni, 4)  #we can set here orphans also 
+    alumni_num = request.GET.get('page')
+    alumni_obj = paginator.get_page(alumni_num)
+    # return render(request, "alumini.html", {'alumi': alumi})
+    return render(request, "alumini.html", {'alumni_obj': alumni_obj})
 
 
 

@@ -49,7 +49,8 @@
 
     <div class="row">
 
-      {% for i in alumi %}
+      {% comment %} {% for i in alumi %} {% endcomment %}
+      {% for i in alumni_obj %}
 
       <div class="col-lg-6 mt-4 ">
         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
@@ -80,6 +81,36 @@
       
   </div>
 </section><!-- End alumini Section -->
+
+<!-- pagination -->
+<section>
+<div>
+<span>
+  {% if alumni_obj.has_previous %}
+  <a href="?page={{ alumni_obj.previous_page_number }}">Previous</a>
+  {% endif %}
+
+  <span>{{ alumni_obj.number }}</span>
+
+  {% if alumni_obj.has_next %}
+  <a href="?page={{ alumni_obj.next_page_number }}">Next</a>
+  {% endif %}
+</span>
+</div>
+{% comment %} <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav> {% endcomment %}
+</section>
 
 
 
