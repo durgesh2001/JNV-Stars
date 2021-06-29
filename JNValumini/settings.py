@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'alumini',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +81,18 @@ WSGI_APPLICATION = 'JNValumini.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'JNV_STARS',
+        'USER': 'jnvstars',
+        'PASSWORD' : 'Alumni2006',
+        'HOST' : 'database-1.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
+        'PORT' : '5432'
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -131,4 +140,16 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIAQJRI5W6U2PUGAWX2'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
