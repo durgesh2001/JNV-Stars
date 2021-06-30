@@ -28,7 +28,7 @@ SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -155,5 +155,5 @@ AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
