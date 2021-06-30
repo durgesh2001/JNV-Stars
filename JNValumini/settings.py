@@ -28,7 +28,6 @@ SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
 DEBUG = False
 
 
-
 ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1:8000']
 
 
@@ -85,10 +84,10 @@ WSGI_APPLICATION = 'JNValumini.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'JNV_STARS',
-        'USER': 'jnvstars',
+        'NAME': 'jnvstars',
+        'USER': 'jnvalumni',
         'PASSWORD' : 'Alumni2006',
-        'HOST' : 'database-1.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
+        'HOST' : 'database-2.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
         'PORT' : '5432'
     }
 }
