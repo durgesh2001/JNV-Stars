@@ -8,6 +8,7 @@ class aluminies(models.Model):
     name = models.CharField(max_length=50, null=True)
     profession = models.CharField(max_length=70, null=True)
     batch = models.IntegerField( null=True)
+    InSchool = models.CharField(max_length=50, null=True)
     bio = models.TextField(max_length=1000, null=True)
     alumini_image = models.ImageField(upload_to="images", default='img/dpic.png' ,null=True, blank=True)
     education = models.CharField(max_length=100, null=True)
