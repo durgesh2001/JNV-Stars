@@ -1,6 +1,5 @@
 {% extends 'main.html' %}
 {% block title %} | Alumini{% endblock title %}
-{% block alumniactive %} active {% endblock alumniactive %}
 {% block content %}
 {% load static %}    
     
@@ -45,12 +44,13 @@
 
     <div class="section-title">
       <h2>Alumni Of JNV Hardoi</h2>
-      <p>This website is primarily concerned to the alumni of JNV HARDOI . Here you can find the details of alumini. If you also want to add your details then you can <a href="{% url 'contact' %}" >contact us </a>. If you have already given, you can search about yourself  very smoothly.</p>
+      <p>This website is primarily concerned to the alumni of JNV HARDOI . Here you can find the details of alumni. If you also want to add your details then you can <a href="{% url 'contact' %}" >contact us </a>. If you have already given, you can search about yourself  very smoothly.</p>
     </div>
 
     <div class="row">
 
-      {% for i in alumi %}
+      {% comment %} {% for i in alumi %} {% endcomment %}
+      {% for i in alumni_obj %}
 
       <div class="col-lg-6 mt-4 ">
         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
@@ -82,6 +82,29 @@
   </div>
 </section><!-- End alumini Section -->
 
+<!-- pagination -->
+<section>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+
+    {% if alumni_obj.has_previous %}
+      <li class="page-item active">
+        <a class="page-link" href="?page={{ alumni_obj.previous_page_number }}">Previous</a>
+      </li>
+    {% endif %}
+
+    <li class="page-item"><a class="page-link"><span>{{ alumni_obj.number }}</span></a></li>
+
+    {% if alumni_obj.has_next %}
+      <li class="page-item active">
+        <a class="page-link" href="?page={{ alumni_obj.next_page_number }}">Next</a>
+      </li>
+    {% endif %}
+
+  </ul>
+</nav>
+
+</section>
 
 
 {% endblock %} 

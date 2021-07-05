@@ -1,34 +1,27 @@
 {% load static %}
-
+{% url 'index' as index %}
+{% url 'campus' as campus %}
+{% url 'alumini' as alumini %}
+{% url 'about' as about %}
+{% url 'gallery' as gallery %}
+{% url 'contact' as contact %}
+{% url 'ourteam' as ourteam %}
 
 <nav id="navbar" class="navbar">
     <ul>
-      <li class="{% block homeactive %} {% endblock homeactive %}"><a class="nav-link scrollto" href="{% url 'index' %}">Home</a></li>
-      <li class="{% block campusactive %} {% endblock campusactive %}"><a class="nav-link scrollto" href="{% url 'campus' %}">Campus</a></li>
-      <li class="{% block alumniactive %} {% endblock alumniactive %}"><a class="nav-link scrollto" href="{% url 'alumini' %}">Alumni</a></li>
-      
-      
-      <li class="dropdown {% block aboutactive %} {% endblock aboutactive %}"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
-          <li><a href="#about-overview">Overview</a></li>
-          <li><a href="#ab-administration"><span>Administration</span></a></li>
-            <li class="dropdown"><a href="#ab-academics"><span>Academics</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#"><span style="font-size:12px"> Smart Class</span></a></li>
-                  <li><a href="#"><span style="font-size:12px">Labs</span></a></li>
-                  <li><a href="#"><span style="font-size:12px">Library</span></a></li>
-                </ul>
-              </li>
-          <li><a href="#ab-mess">Mess</a></li>
-          <li><a href="#ab-hostel">Hostel</a></li>
-          <li><a href="#pri-health">Health Center</a></li>
-          <li><a href="#ab-sports">Sports</a></li>
-          <li><a href="#ab-culture">Cultural Activities</a></li>
-        </ul>
-      </li>
-      <li class="{% block galleryactive %} {% endblock galleryactive %}"><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
-      <li class="{% block contactactive %} {% endblock contactactive %}"><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
-      <li class="{% block teamactive %} {% endblock teamactive %}"><a class="nav-link scrollto" href="{% url 'ourteam' %}">OurTeam</a></li>
+      <li><a class="nav-link scrollto {% if request.path == index %} active {% endif %}" href="{% url 'index' %}">Home</a></li>
+
+      <li><a class="nav-link scrollto {% if request.path == campus %} active {% endif %}" href="{% url 'campus' %}">Campus</a></li>
+
+      <li><a class="nav-link scrollto {% if request.path == alumini %} active {% endif %}" href="{% url 'alumini' %}">Alumni</a></li>
+
+      <li><a class="nav-link scrollto {% if request.path == about %} active {% endif %}" href="{% url 'about' %}">About</a></li>
+
+      <li><a class="nav-link scrollto  {% if request.path == gallery %} active {% endif %}" href="{% url 'gallery' %}">Gallery</a></li>
+
+      <li><a class="nav-link scrollto {% if request.path == contact %} active {% endif %}" href="{% url 'contact' %}">Contact</a></li>
+
+      <li><a class="nav-link scrollto {% if request.path == ourteam %} active {% endif %}" href="{% url 'ourteam' %}">Ourteam</a></li>
       {% comment %} <li><a class="getstarted scrollto" href="#about">Get Started</a></li> {% endcomment %}
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>

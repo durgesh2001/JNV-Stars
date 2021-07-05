@@ -3,6 +3,7 @@ from alumini.models import aluminies
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -15,8 +16,12 @@ def index(request):
 
 
 def alumini(request):
-    alumi = aluminies.objects.all()
-    return render(request, "alumini.html", {'alumi': alumi})
+    alumni = aluminies.objects.all()   #.order_by('batch')
+    paginator = Paginator(alumni, 10)  #we can set here "orphans" also 
+    alumni_num = request.GET.get('page')
+    alumni_obj = paginator.get_page(alumni_num)
+    # return render(request, "alumini.html", {'alumi': alumi})
+    return render(request, "alumini.html", {'alumni_obj': alumni_obj})
 
 
 
@@ -27,21 +32,7 @@ def about(request):
 
 
 def contact(request):
-    
-    if request.method == "POST":
-        name = request.POST['name']
-        email = request.POST['email']
-        message = request.POST['message']
-       
-        print(name,email,message)
-
-        if len(name)<3 or len(email)<5 or len(message)<4 :
-            messages.error(request, "Please,fill the form correctly.")
-        else:
-            contact = Contact(name=name, email=email, message=message)
-            contact.save()
-            messages.success(request, 'Your Message has been sent.')
-    return render(request, "contact.html")
+   return render(request, "contact.html")
 
 
 
