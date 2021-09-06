@@ -14,7 +14,7 @@ class aluminies(models.Model):
     education = models.CharField(max_length=100, null=True)
     college = models.CharField(max_length=200, null=True)
     address = models.CharField(max_length=500, null=True)
-    phone = models.IntegerField(max_length=10, null=True, blank=True)
+    phone = models.CharField(max_length=12, null=True, blank=True)
     email = models.EmailField(max_length=100, null=True)
     twitter_link = models.URLField(blank=True, null=True)
     facebook_link = models.URLField(blank=True, null=True)
