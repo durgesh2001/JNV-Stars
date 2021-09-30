@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1']
@@ -149,13 +149,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #S3 BUCKETS CONFIG
 
-AWS_ACCESS_KEY_ID = 'AKIAQJRI5W6UYXJAFNGM'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
-AWS_S3_REGION_NAME ='us-east-2'
-AWS_S3_SIGNATURE_VERSION = 's3v4'
+AWS_ACCESS_KEY_ID = '#'
+AWS_SECRET_ACCESS_KEY = '#'
+AWS_STORAGE_BUCKET_NAME = '#'
+AWS_S3_REGION_NAME ='#'
+AWS_S3_SIGNATURE_VERSION = '#'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#`STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
