@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1']
@@ -81,7 +81,16 @@ WSGI_APPLICATION = 'JNValumini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jnvstars',
+        'USER': 'jnvalumni',
+        'PASSWORD' : 'Alumni2006',
+        'HOST' : 'database-2.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
+        'PORT' : '5432'
+    }
+}
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
@@ -140,4 +149,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #S3 BUCKETS CONFIG
 
+AWS_ACCESS_KEY_ID = 'AKIAQJRI5W6U6MXCWLEX'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
+AWS_S3_REGION_NAME ='us-east-2'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#`STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
