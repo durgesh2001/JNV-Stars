@@ -81,16 +81,7 @@ WSGI_APPLICATION = 'JNValumini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jnvstars',
-        'USER': 'jnvalumni',
-        'PASSWORD' : 'Alumni2006',
-        'HOST' : 'database-2.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
-        'PORT' : '5432'
-    }
-}
+
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
@@ -149,13 +140,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #S3 BUCKETS CONFIG
 
-AWS_ACCESS_KEY_ID = '#'
-AWS_SECRET_ACCESS_KEY = '#'
-AWS_STORAGE_BUCKET_NAME = '#'
-AWS_S3_REGION_NAME ='#'
-AWS_S3_SIGNATURE_VERSION = '#'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
