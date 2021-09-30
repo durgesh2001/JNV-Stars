@@ -1,5 +1,5 @@
 {% extends 'main.html' %}
-{% block title %} | Alumini{% endblock title %}
+{% block title %} | Alumni{% endblock title %}
 {% block content %}
 {% load static %}    
     
@@ -93,7 +93,7 @@
       </li>
     {% endif %}
 
-    <li class="page-item"><a class="page-link"><span>{{ alumni_obj.number }}</span></a></li>
+    <li class="page-item"><a class="page-link"><span>{{ alumni_obj.number }}  of {{ alumni_obj.paginator.num_pages }}.</span></a></li>
 
     {% if alumni_obj.has_next %}
       <li class="page-item active">

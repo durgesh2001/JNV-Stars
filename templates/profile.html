@@ -246,7 +246,7 @@ a.text-lightred:hover {
             <div class="col-lg-8 col-md-7"><hr>
                 <div class="team-single-text padding-50px-left sm-no-padding-left">
                     <h4 class="font-size38 sm-font-size32 xs-font-size30" ><span class="fas  text-blue">{{stu.name}}</span></h4>
-                    <p class="no-margin-bottom">{{stu.bio}}</p>
+                    <p class="no-margin-bottom">{{stu.bio|linebreaks}}</p>
                     <br><hr><br>
                     <div class="contact-info-section margin-40px-tb">
                         <ul class="list-style9 no-margin">
@@ -259,6 +259,19 @@ a.text-lightred:hover {
                                     </div>
                                     <div class="col-md-7 col-7">
                                         <p>{{stu.batch}}</p>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-graduation-cap text-lightred"></i>
+                                        <strong class="margin-10px-left text-lightred">In-School :</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>{{stu.InSchool}}</p>
                                     </div>
                                 </div>
 
@@ -322,7 +335,7 @@ a.text-lightred:hover {
                                         <strong class="margin-10px-left xs-margin-four-left text-lightred">Email :</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <p><a href="{{stu.email}}">{{stu.email}}</a></p>
+                                        <p><a href="https://mail.google.com/mail/u/{{stu.email}}/#compose">{{stu.email}}</a></p>
                                     </div>
                                 </div>
                             </li>

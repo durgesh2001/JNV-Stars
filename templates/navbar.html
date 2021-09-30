@@ -11,11 +11,11 @@
     <ul>
       <li><a class="nav-link scrollto {% if request.path == index %} active {% endif %}" href="{% url 'index' %}">Home</a></li>
 
+      <li><a class="nav-link scrollto {% if request.path == about %} active {% endif %}" href="{% url 'about' %}">About</a></li>
+      
       <li><a class="nav-link scrollto {% if request.path == campus %} active {% endif %}" href="{% url 'campus' %}">Campus</a></li>
 
       <li><a class="nav-link scrollto {% if request.path == alumini %} active {% endif %}" href="{% url 'alumini' %}">Alumni</a></li>
-
-      <li><a class="nav-link scrollto {% if request.path == about %} active {% endif %}" href="{% url 'about' %}">About</a></li>
 
       <li><a class="nav-link scrollto  {% if request.path == gallery %} active {% endif %}" href="{% url 'gallery' %}">Gallery</a></li>
 
