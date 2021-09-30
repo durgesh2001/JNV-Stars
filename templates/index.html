@@ -1,0 +1,205 @@
+ 
+ {% extends 'main.html' %}  
+ {% block content %}
+ {% load static %} 
+ 
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Jawahar Navodaya Vidyalaya Hardoi</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Jawahar Navodaya Vidyalayas (JNVs) are a system of central schools for talented students predominantly from rural area in India</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Who We Are</h3>
+              <h2>JNVs are specifically tasked with finding talented children in rural areas of India and providing them with an education equivalent to the best residential school system, without regard to their families' socio-economic condition</h2>
+              <p>
+                The social milieu of JNVs is defined by the mingling of different sections of society from various regions of India since these schools follow the affirmative action policy and have a policy for migration from different linguistic regions. Teachers, chosen from across the country, live in the same campus and interact with students on 24X7 basis leading to a familial feeling
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="https://en.wikipedia.org/wiki/Jawahar_Navodaya_Vidyalaya" target="_blank" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'img/library.jpg' %}" class="img-fluid" alt="">
+          </div>
+          
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+
+    {% include 'count.html' %}
+
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Features</h2>
+          <p>Salient Features of Navodaya Vidyalayas</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <img src="{% static 'img/jnvcollageimage.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>JNVST: Entrance on the basis of merit</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Reservation of Seats</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Co-educational Residential Schools with Free Educations</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Adherence to Three-Language Formula</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Location of Jawahar Navodaya Vidyalayas</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Promotion of National Integration</h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div> <!-- / row -->
+
+
+
+
+        <!-- ======= Card Section ======= -->
+
+  <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+      
+        <header class="section-header">
+          <h2>Alumni</h2>
+          <p>Alumni of Navodaya Vidyalayas</p>
+        </header>
+
+
+        <div class="row">
+        {% comment %} <div class="box"> {% endcomment %}
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="{% static 'img/alumini-images/amrendra.jpeg' %}" alt="images">
+            </div>
+            <div class="details">
+              <h2>Amrendra Kumar<br><span>Tresory Officer(UPPCS)</span></h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx">
+                <img src="{% static 'img/alumini-images/akhilendra.jpg' %}" alt="images">
+            </div>
+            <div class="details">
+                <h2>Akhilendra Dixit<br><span>Teacher</span></h2>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div class="imgBx">
+              <img src="{% static 'img/alumini-images/abhinendra.jpg' %}" alt="images">
+            </div>
+            <div class="details">
+              <h2>Abhinendra Gaurav<br><span>SDE at Cvent</span></h2>
+            </div>
+          </div>
+      
+          
+        </div>
+      {% comment %} </div> {% endcomment %}
+
+    </div>
+    <br/>
+   <center> <a href="{% url 'alumini' %}" button type="button" class="btn btn-outline-success">See all Alumni</a></center>
+  </section>    
+      
+
+        
+  {% include 'services.html' %}
+    
+    
+  {% include 'testimonial.html' %} 
+
+    
+
+    
+
+  </main><!-- End #main -->
+
+
+
+  {% endblock %} 
+
+  
