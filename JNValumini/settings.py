@@ -11,8 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 
 from pathlib import Path
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +84,16 @@ WSGI_APPLICATION = 'JNValumini.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jnvstars',
+        'USER': 'jnvalumni',
+        'PASSWORD' : os.getenv('PASSWORD'),
+        'HOST' : os.getenv('HOST'),
+        'PORT' : os.getenv('PORT'),
+    }
+}
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
@@ -140,4 +152,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #S3 BUCKETS CONFIG
 
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID '),
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY ')
+AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
+AWS_S3_REGION_NAME ='us-east-2'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#`STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
