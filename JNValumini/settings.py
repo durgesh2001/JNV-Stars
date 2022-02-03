@@ -11,8 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 
 from pathlib import Path
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1=#c4t(i6z6#39av(rv1oa*%bv!%aj8iacx44rc90iv+*lu-+t'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['jnvstars.herokuapp.com','127.0.0.1']
@@ -86,9 +89,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'jnvstars',
         'USER': 'jnvalumni',
-        'PASSWORD' : 'Alumni2006',
-        'HOST' : 'database-2.cdsv8whscmnj.us-east-2.rds.amazonaws.com',
-        'PORT' : '5432'
+        'PASSWORD' : os.getenv('PASSWORD'),
+        'HOST' : os.getenv('HOST'),
+        'PORT' : os.getenv('PORT'),
     }
 }
 
@@ -149,8 +152,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #S3 BUCKETS CONFIG
 
-AWS_ACCESS_KEY_ID = 'AKIAQJRI5W6U6MXCWLEX'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID '),
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY ')
 AWS_STORAGE_BUCKET_NAME = 'jnv-alumni'
 AWS_S3_REGION_NAME ='us-east-2'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
